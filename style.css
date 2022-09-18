@@ -1,7 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 63.5%;
+}
+
+body {
+  font-family: 'Sen', sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #bcbcbc;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+form {
+  width: 90%;
+  margin: 20px 0 0 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+input {
+  height: 35px;
+  margin-top: 5px;
+  padding: 5px;
+  outline: none;
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+input.error {
+  border: 2px solid red;
+}
+
+input.success {
+  border: 2px solid green;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  font-family: 'Sen', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: rgb(88, 84, 84);
+  filter: brightness(150%);
+}
+
+button:focus {
+  outline: none;
+}
+
+.message {
+  font-size: 2rem;
+  font-weight: 700;
 }
