@@ -59,11 +59,11 @@ input {
   transition: all 0.3s;
 }
 
-input.error {
+.form-group.error input {
   border: 2px solid red;
 }
 
-input.success {
+.form-group.success input {
   border: 2px solid green;
 }
 
@@ -72,6 +72,10 @@ small {
   margin-top: 4px;
   display: none;
   color: red;
+}
+
+.form-group.error small {
+  display: block;
 }
 
 button {
