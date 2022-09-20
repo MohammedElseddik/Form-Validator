@@ -8,12 +8,19 @@ function showError(input, message) {
   errorMessage.textContent = `${input.id} ${message}`;
 }
 
+function showSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-group success';
+}
+
 function checkRequired(formInputs) {
   console.log(formInputs);
   formInputs.forEach((input) => {
     if (input.value === '') {
       showError(input, 'is required');
+      return;
     }
+    showSuccess(input);
   });
 }
 

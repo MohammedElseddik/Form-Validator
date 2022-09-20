@@ -60,11 +60,11 @@ input {
 }
 
 .form-group.error input {
-  border: 2px solid red;
+  border: 3px solid red;
 }
 
 .form-group.success input {
-  border: 2px solid green;
+  border: 3px solid green;
 }
 
 small {
