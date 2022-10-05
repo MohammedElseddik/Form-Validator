@@ -22,7 +22,6 @@ function checkPasswordValidation(passwordInput) {
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm.test(
       passwordInput.value
     );
-  console.log('paaaaaaa', isPasswordValid, passwordInput);
   if (!isPasswordValid) {
     showError(
       passwordInput,
@@ -55,6 +54,15 @@ function checkInputLength(formInput, min, max) {
   }
 }
 
+function checkEmailValidation(email) {
+  const isEmailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email.value);
+  if (isEmailValid) {
+    showSuccess(email);
+    return;
+  }
+  showError(email, 'is not valid');
+}
+
 function checkinputsValidity(formInputs) {
   console.log(formInputs);
   formInputs.forEach((input, index) => {
@@ -63,6 +71,8 @@ function checkinputsValidity(formInputs) {
       return;
     } else if (input.id === 'username') {
       checkInputLength(input, 3, 20);
+    } else if (input.id === 'email') {
+      checkEmailValidation(input);
     } else if (input.id === 'password') {
       checkInputLength(input, 6, 15);
       checkPasswordValidation(input);
